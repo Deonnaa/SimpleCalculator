@@ -29,6 +29,7 @@ public class SimpleCalculator {
 		if (operator.equals("/")) {
 			System.out.println(number1 + " " + operator + " " + number2 + " equals " + (number1 / number2));
 		}
+		scanner.close();
 	}
 }
 
