@@ -15,25 +15,25 @@ public class SimpleCalculator {
 		String operator = scanner.next();
 
 		if (operator.equals("+")) {
-			System.out.println(number1 + " " + operator + " " + number2 + " equals " + (number1 + number2));
+			System.out.printf("%s %s %s equals %.2f%n", number1, operator, number2, (number1 + number2));
 		}
 
 		if (operator.equals("-")) {
-			System.out.println(number1 + " " + operator + " " + number2 + " equals " + (number1 - number2));
+			System.out.printf("%s %s %s equals %.2f%n", number1, operator, number2, (number1 - number2));
 		}
 
 		if (operator.equals("*")) {
-			System.out.println(number1 + " " + operator + " " + number2 + " equals " + (number1 * number2));
+			System.out.printf("%s %s %s equals %.2f%n", number1, operator, number2, (number1 * number2));
 		}
 
 		if (operator.equals("/")) {
-			System.out.println(number1 + " " + operator + " " + number2 + " equals " + (number1 / number2));
+			if (number2 != 0) {
+				System.out.printf("%s %s %s equals %.2f%n", number1, operator, number2, (number1 / number2));
+			} else {
+				System.out.println("Division by zero is not allowed.");
+			}
 		}
+
 		scanner.close();
 	}
 }
-
-//Welcome to Calculator.  What is the first number? 42
-//What is the second number? 8
-//Do you want to: +   -   *   or   //
-//42.0 / 8.0 equals 5.25
